@@ -4,278 +4,597 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- --------- UNICONS ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- --------- FAVICON ---------- -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-    <title>Portfolio | Saad Ayouch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Responsive website food</title>
 </head>
 
 <body>
-    <div class="container">
-        <!-- --------------- HEADER --------------- -->
-        <nav id="header">
-            <div class="nav-logo">
-                <p class="nav-name">Saad Ayouch</p>
-                <span>.</span>
-            </div>
-            <div class="nav-menu" id="myNavMenu">
-                <ul class="nav_menu_list">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
-                    </li>
-                </ul>
 
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Saad Ayouch</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact me</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
             </div>
-            <div class="nav-button">
-                <a class="btnLink" href="assets/PDF/Saad_Ayouch.pdf">Download CV <i class="uil uil-file-alt"></i></a>
-            </div>
-            <div class="nav-menu-btn">
-                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
             </div>
         </nav>
+    </header>
 
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,I'am Saad</h1>
+                    <h2 class="home__subtitle  ">
+                        <div class="featured-name">
+                            <p>I'm <span class="typedText"></span></p>
+                        </div>
+                    </h2>
+                    <p>As a Junior Full-Stack Developer, I'm keen to soak up knowledge 
+                        like a sponge, constantly seeking out new challenges and learning
+                         opportunities to level up my skills and advance my career in the
+                          exciting world of software development.</p><br>
+                    <a href="#" class="button">Check Resume</a>
+                </div>
 
-        <!-- -------------- MAIN ---------------- -->
-        <main class="wrapper">
-            <!-- -------------- FEATURED BOX ---------------- -->
-            <section class="featured-box" id="home">
-                <div class="featured-text">
-                    <div class="featured-text-card">
-                        <span>Saad Ayouch</span>
-                    </div>
-                    <div class="featured-name">
-                        <p>I'm <span class="typedText"></span></p>
-                    </div>
-                    <div class="featured-text-info">
-                        <p>I'm Saad Ayouch, building my version of the digital world one step at a time. All coding
-                            projects are built from the ground up,
-                            from planning and designing, to solving real-life problems with code.
+                <img src="assets/images/imgProfile2.JPG" alt="" class="home__img">
+            </div>
+        </section>
+
+        <!--========== ABOUT ==========-->
+        <section class="about section bd-container" id="about">
+            <span class="section-subtitle about__initial"
+                style=" font-size: 1.5rem;text-align: center;padding: 3%;">About me</span>
+
+            <div class="about__container  bd-grid">
+                <div class="about__data">
+                    <h2 class="section-title about__initial">Full Stack Developer</h2>
+                    <p class="about__description">I am Saad Ayouch, a junior Full Stack developer passionate about
+                        creating innovative web solutions. I have skills in front-end and back-end development as well
+                        as database management. My goal is to continue learning and contributing to dynamic development
+                        teams.</p>
+                    <a href="#" class="button">
+                        <p>Download CV
+                            <span style="margin-top: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512">
+                                    <path fill="#ffffff"
+                                        d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                                </svg>
+                            </span>
+
                         </p>
-                    </div>
-                    <div class="featured-text-btn">
-                        <a class="btn blue-btn" id="contact" href="mailto:saadayouch08@gmail.com">Contact</a>
-                        <a class="btnLink" href="assets/PDF/Saad_Ayouch.pdf">Download CV <i
-                                class="uil uil-file-alt"></i></a>
-                    </div>
-                    <div class="social_icons">
-                        <a href="https://www.linkedin.com/in/saad-ayouch-215a56243/" target="_blank">
-                            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-                        </a>
-                        <a href="https://github.com/SAAD0589" target="_blank">
-                            <div class="icon"><i class="uil uil-github-alt"></i></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="featured-image">
-                    <div class="image">
-                        <img src="assets/images/saad.png" alt="avatar">
-                    </div>
-                </div>
-                <div class="scroll-icon-box">
-                    <a href="#about" class="scroll-btn">
-                        <i class="uil uil-mouse-alt"></i>
-                        <p>Scroll Down</p>
                     </a>
                 </div>
 
-            </section>
-            <!-- -------------- ABOUT BOX ---------------- -->
-            <section class="section" id="about">
-                <div class="top-header">
-                    <h1>About Me</h1>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="about-info">
-                            <h3>My introduction</h3>
-                            <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
-                                frameworks and libraries,which allows me to implement interactive features.
-                                Additionally, I have experirence working with content management systems (CMS) like
-                                WordPress.
-                            </p>
-                            <div class="about-btn">
-                                <button class="btn" id="myButton" onclick="displayHref()"
-                                    href="assets/PDF/Saad_Ayouch.pdf">Download CV <i
-                                        class="uil uil-import"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Frontend</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Bootstrap</span>
-                                <span>Tailwind CSS</span>
-                                <span>JavaScript</span>
-                                <span>React JS</span>
-                                <span>Next JS</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Backend</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>PHP</span>
-                                <span>Python</span>
-                                <span>Laravel</span>
-                                <span>Express JS</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Database</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>MySQL</span>
-                                <span>PostgreSQL</span>
-                                <span>MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- -------------- PROJECT BOX ---------------- -->
-
-            <section class="section" id="projects">
-                <div class="top-header">
-                    <h1>Projects</h1>
-                </div>
-                <div class="project-container">
-                    <div class="project-box">
-                        <img src="assets/images/Jumatik.jpg" class="project-img">
-                        <span class="hover-message">Mern JS</span>
-
-                    </div>
-
-                    <div class="project-box">
-                        <img src="assets/images/chess-project.jpg" class="project-img">
-                        <span class="hover-message" id="styled-span">React JS ,Bootstrap</span>
-
-                    </div>
-
-                    <div class="project-box">
-                        <img src="assets/images/e-comerce.jpg" class="project-img">
-                        <span class="hover-message">Laravel,Bootstrap</span>
-
-                    </div>
-                    <div class="project-box">
-                        <img src="assets/images/arcade1.jpg" class="project-img" id="image1">
-                        <img src="assets/images/arcade2.jpg" class="project-img" id="image2">
-                        <span class="hover-message">Laravel, React JS, Bootstrap</span>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- -------------- CONTACT BOX ---------------- -->
-
-            <section class="section" id="contact">
-                <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me here</span>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="contact-info">
-                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                            <p><i class="uil uil-envelope"></i> Email: saadayouch08.com</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Name">
-                                <input type="text" class="input-field" placeholder="Email">
-                            </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-
-        <!-- --------------- FOOTER --------------- -->
-        <footer>
-            <div class="top-footer">
-                <p>Saad Ayouch .</p>
+                <img src="assets/images/saadimg.jpg" alt="" class="about__img">
             </div>
-            <div class="middle-footer">
-                <ul class="footer-menu">
-                    <li class="footer_menu_list">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#contact">Contact</a>
-                    </li>
+        </section>
+
+        <!--========== SERVICES ==========-->
+        <section class="services section bd-container" id="services">
+            <span class="section-subtitle" style=" font-size: 1.5rem;text-align: center;">Skills</span>
+            <h2 class="section-title">Here are some of my skills on which I have been<br> working on in my little
+                career.</h2>
+
+            <div class="services__container  bd-grid">
+                <div class="services__content">
+                    <h3 class="services__title">Front End</h3>
+                    <div class="languges">
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                            <p>HTML</p>
+                        </div>
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                            <p>CSS</p>
+
+                        </div>
+                        <div class="languge">
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                            <p>JavaScript</p>
+                        </div><br>
+                        <div class="languge">
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="languge">
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                            <p>React JS</p>
+
+                        </div>
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                            <p>Tailwind CSS</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="services__content">
+                    <h3 class="services__title">Back End</h3>
+
+                    <div class="languges">
+                        <div class="languge">
+                            <img style="width: 60px;height: 60px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+                            <p>NODE JS</p>
+                        </div>
+                        <div class="languge">
+                            <img style="width: 60px;height: 60px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                            <p>PHP</p>
+
+                        </div>
+
+                        <div class="languge">
+
+                            <img style="width: 60px;height: 60px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
+                            <p>LARAVEL</p>
+
+                        </div>
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original.svg" />
+                            <p>LIVEWIRE</p>
+
+                        </div>
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                            <p>Express JS</p>
+
+                        </div>
+                        <div class="languge">
+
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" />
+                            <p>Wordpress</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="services__content">
+                    <h3 class="services__title">Others</h3>
+
+                    <div class="languges">
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                            <p>GIT</p>
+                        </div>
+                        <div class="languge">
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                            <p>GITHUB</p>
+
+                        </div>
+
+                        <div class="languge">
+
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                            <p>VS CODE</p>
+
+                        </div>
+                        <div class="languge">
+
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
+                            <p>POSTMAN</p>
+
+                        </div>
+                        <div class="languge">
+
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unifiedmodelinglanguage/unifiedmodelinglanguage-original.svg" />
+                            <p>UML</p>
+
+                        </div>
+                        <div class="languge">
+
+
+
+                            <img style="width: 50px;height: 50px;"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/filezilla/filezilla-original.svg" />
+                            <p>FileZila</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--========== MENU ==========-->
+        <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-lg-6 col-12">
+                      <h2 class="mb-4">Experiences </h2>
+    
+                        <div class="timeline">
+                            <div class="timeline-wrapper">
+                                <div class="timeline-yr">
+                                    <span>11/2023</span>
+                                </div>
+                                <div class="timeline-info">
+                                    <h3><span>Full-Stack Development</h3>
+                                    <p>• Development of a management application for lawyers, 
+                                        secretaries and clients and records and communications management 
+                                        between the different parties involved using Laravel technologies, 
+                                        LiveWire, Ajax and Flexfit.</p>
+                                    <p>• An application for the company Aphsem, specialized in the treatment and 
+                                        supply of certified organic herbs. This application will manage 
+                                        business operations, including inventory management, ordering 
+                                        and customer relations , based on Wordpress, Bootstrap and Ajax.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-wrapper">
+                                <div class="timeline-yr">
+                                    <span>05/2023</span>
+                                </div>
+                                <div class="timeline-info">
+                                    <h3><span>Mern JS Development</span></h3>
+                                    <p>Development of a complete e-commerce website with online sales and notification features.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-wrapper">
+                                 <div class="timeline-yr">
+                                      <span>03/2023</span>
+                                      
+                                 </div>
+                                 
+                                 <div class="timeline-info">
+                                      <h3><span>Web development </span></h3>
+                                      <p>Development of a simple center application
+                                        calls and consultation management.</p>
+                                 </div>
+                            </div>
+    
+                           
+    
+                           
+    
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-6 col-12">
+                      <h2 class="mb-4 mobile-mt-2">Educations</h2>
+    
+                        <div class="timeline">
+                            <div class="timeline-wrapper">
+                                 <div class="timeline-yr">
+                                      <span>2024</span>
+                                 </div>
+                                 <div class="timeline-info">
+                                      <h3><span>École Nationale supérieure d'Arts et Métiers de Rabat (ENSAM)</span><small>Certification JobIntech FULL-STACK PHP</small></h3>
+                                      <p>I am currently taking part in the JobInTech Full Stack PHP training program at the École Nationale supérieure d'Arts et Métiers de Rabat (ENSAM).</p>
+                                 </div>
+                            </div>
+    
+                            <div class="timeline-wrapper">
+                                <div class="timeline-yr">
+                                    <span>2021-2023</span>
+                                </div>
+                                <div class="timeline-info">
+                                    <h3><span class="">Institut Spécialisé de Technologie Appliquée HAYRIAD RABAT</span><br><small class="py-3">Diplôme Technicien spécialisé en Développement Digital WEB Option FULL-STACK</small></h3>
+                                    <p>I completed my Diplôme Technicien spécialisé en Développement Digital WEB Option FULL-STACK at Institut Spécialisé de Technologie Appliquée HAY RIAD RABAT, where I studied Computer Science.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-wrapper">
+                                <div class="timeline-yr">
+                                    <span>2020</span>
+                                </div>
+                                <div class="timeline-info">
+                                    <h3><span>Lycée AL QODS KENITRA</span><small>New Art School</small></h3>
+                                    <p>I completed my Scientific Baccalaureate Option Physical Sciences at LycéeAL QODS KENITRA.</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--===== APP =======-->
+        <div class="swiper mySwiper ">
+            <div class="swiper-wrapper ">
+                <section class="portfolio section swiper-slide " id="portfolio">
+                    <div class="section__title">
+                        <h2 class="section__subtitle">Most recent work</h2>
+
+                        <div class="portfolio__container conteiner">
+                            <div class="">
+                                <!-- Portfolio 1 -->
+                                <div class="portfolio__content grid">
+                                    <div class="image_portfolio">
+                                        <img src="assets/images/ProjectAvocat.png" alt="" class="portfolio__img">
+                                    </div>
+                                    <div class="portfolio__data">
+                                        <h3 class="portfolio__title">Avocat</h3>
+                                        <p class="portfolio_description">Development of a management application for
+                                            lawyers,<br> secretaries and clients and the management of files and
+                                            communications between the <br>various parties involved using Laravel,
+                                            LiveWire, Ajax and Bootstrap technologies</p>
+                                        <a href="https://laraveltest.majjane.agency/" target="_blank" class="button button--flex button--small portfolio__button">Demo
+                                            <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" height="20"
+                                                width="17.5"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path fill="#ffffff"
+                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                            </svg>
+                                        </a>
+                                        <a href="https://github.com/SAAD0589/Cabinet-Avocats" target="_blank" class="button button--flex button--small portfolio__button">GitHub
+                                            <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" height="20"
+                                                width="17.5"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path fill="#ffffff"
+                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio section swiper-slide" id="portfolio">
+                    <div class="section__title">
+                        <h2 class="section__subtitle">Most recent work</h2>
+                        <div class="portfolio__container conteiner">
+                            <div>
+                                <!-- Portfolio 1 -->
+                                <div class="portfolio__content grid">
+                                    <div class="image_portfolio">
+                                        <img src="assets/images/arcade1.jpg" alt="" class="portfolio__img">
+                                    </div>
+                                    <div class="portfolio__data">
+                                        <h3 class="portfolio__title">Avocat</h3>
+                                        <p class="portfolio_description">Development of a management application for
+                                            lawyers,<br> secretaries and clients and the management of files and
+                                            communications between the <br>various parties involved using Laravel,
+                                            LiveWire, Ajax and Bootstrap technologies</p>
+                                        <a href="" class="button button--flex button--small portfolio__button">Demo
+                                            <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" height="20"
+                                                width="17.5"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path fill="#ffffff"
+                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio section swiper-slide" id="portfolio">
+                    <div class="section__title">
+                        <h2 class="section__subtitle">Most recent work</h2>
+
+                        <div class="portfolio__container conteiner">
+                            <div>
+                                <!-- Portfolio 1 -->
+                                <div class="portfolio__content grid">
+                                    <div class="image_portfolio">
+                                        <img src="assets/images/chess-project.jpg" alt="" class="portfolio__img">
+                                    </div>
+                                    <div class="portfolio__data">
+                                        <h3 class="portfolio__title">Avocat</h3>
+                                        <p class="portfolio_description">Development of a management application for
+                                            lawyers,<br> secretaries and clients and the management of files and
+                                            communications between the <br>various parties involved using Laravel,
+                                            LiveWire, Ajax and Bootstrap technologies</p>
+                                        <a href="" class="button button--flex button--small portfolio__button">Demo
+                                            <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" height="20"
+                                                width="17.5"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path fill="#ffffff"
+                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio section swiper-slide" id="portfolio">
+                    <div class="section__title">
+                        <h2 class="section__subtitle">Most recent work</h2>
+
+                        <div class="portfolio__container conteiner">
+                            <div>
+                                <!-- Portfolio 1 -->
+                                <div class="portfolio__content grid">
+                                    <div class="image_portfolio">
+                                        <img src="assets/images/e-comerce.jpg" alt="" class="portfolio__img">
+                                    </div>
+                                    <div class="portfolio__data">
+                                        <h3 class="portfolio__title">Avocat</h3>
+                                        <p class="portfolio_description">Development of a management application for
+                                            lawyers,<br> secretaries and clients and the management of files and
+                                            communications between the <br>various parties involved using Laravel,
+                                            LiveWire, Ajax and Bootstrap technologies</p>
+                                        <a href="" class="button button--flex button--small portfolio__button">Demo
+                                            <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" height="20"
+                                                width="17.5"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path fill="#ffffff"
+                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+
+        <!--========== CONTACT US ==========-->
+        
+       <section class="section" id="contact">
+        <div class="top-header">
+          <h1>Get in touch</h1>
+          <span>Do you have a project in your mind, contact me here</span>
+        </div>
+        <div class="row">
+           <div class="column">
+              <div class="contact-info">
+                  <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                  <p><i class="uil uil-envelope"></i> Email: saadayouch08@gmail.com</p>
+              </div>
+           </div>
+           <div class="column">
+              <div class="form-control">
+                  <div class="form-inputs">
+                      <input type="text" class="input-field" placeholder="Name">
+                      <input type="text" class="input-field" placeholder="Email">
+                  </div>
+                  <div class="text-area">
+                      <textarea placeholder="Message"></textarea>
+                  </div>
+                  <div class="form-button">
+                    <a href="#" class="button">Send <i class="uil uil-message"></i></a>
+                  </div>
+              </div>
+           </div>
+        </div>
+     </section>
+  </main>
+
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Tasty Food</a>
+                <span class="footer__description">Restaurant</span>
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Services</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Delivery</a></li>
+                    <li><a href="#" class="footer__link">Pricing</a></li>
+                    <li><a href="#" class="footer__link">Fast food</a></li>
+                    <li><a href="#" class="footer__link">Reserve your spot</a></li>
                 </ul>
             </div>
-            <div class="footer-social-icons">
-                <a href="https://www.linkedin.com/in/saad-ayouch-215a56243/" target="_blank">
-                    <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-                </a>
-                <a href="https://github.com/SAAD0589" target="_blank">
-                    <div class="icon"><i class="uil uil-github-alt"></i></div>
-                </a>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Event</a></li>
+                    <li><a href="#" class="footer__link">Contact us</a></li>
+                    <li><a href="#" class="footer__link">Privacy policy</a></li>
+                    <li><a href="#" class="footer__link">Terms of services</a></li>
+                </ul>
             </div>
-            <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Saad Ayouch</a> - All rights reserved
-                </p>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Adress</h3>
+                <ul>
+                    <li>Lima - Peru</li>
+                    <li>Jr Union #999</li>
+                    <li>999 - 888 - 777</li>
+                    <li>tastyfood@email.com</li>
+                </ul>
             </div>
-        </footer>
+        </div>
 
-    </div>
+        <p class="footer__copy">&#169; 2020 Bedimcode. All right reserved</p>
+    </footer>
 
-
-
-
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- ----- MAIN JS ----- -->
-    <script src="./assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script>
+        var typingEffect = new Typed(".typedText", {
+            strings: ["Full Stack Developer", "Programmer", "tech lover"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 2000
+        });
+    </script>
 </body>
 
 </html>

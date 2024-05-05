@@ -1,143 +1,112 @@
-/* ----- NAVIGATION BAR FUNCTION ----- */
-function displayHref() {
-    var button = document.getElementById("myButton");
-    var href = button.href;
-    document.getElementById("hrefDisplay").textContent = href;
+/*==================== SHOW MENU ====================*/
+
+
+
+
+
+const showMenu = (toggleId, navId) =>{
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId)
+  
+  // Validate that variables exist
+  if(toggle && nav){
+      toggle.addEventListener('click', ()=>{
+          // We add the show-menu class to the div tag with the nav__menu class
+          nav.classList.toggle('show-menu')
+      })
   }
-// JavaScript to switch images every 2 seconds
-let imageIndex = 1; // Start with the first image
-
-function showImage() {
-    // Hide all images
-    document.getElementById('image1').style.display = 'none';
-    document.getElementById('image2').style.display = 'none';
-
-    // Show the current image
-    document.getElementById(`image${imageIndex}`).style.display = 'block';
-
-    // Increment the index for the next image
-    imageIndex = (imageIndex === 1) ? 2 : 1;
-
-    // Call the function again after 2 seconds
-    setTimeout(showImage, 4000);
 }
+showMenu('nav-toggle','nav-menu')
 
-// Start the slideshow
-showImage();
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
 
-function myMenuFunction(){
-    var menuBtn = document.getElementById("myNavMenu");
+function linkAction(){
+  const navMenu = document.getElementById('nav-menu')
+  // When we click on each nav__link, we remove the show-menu class
+  navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-    if(menuBtn.className === "nav-menu"){
-      menuBtn.className += " responsive";
-    } else {
-      menuBtn.className = "nav-menu";
-    }
-  }
-
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-  window.onscroll = function() {headerShadow()};
-
-  function headerShadow() {
-    const navHeader =document.getElementById("header");
-
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
-
-      navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-      navHeader.style.height = "70px";
-      navHeader.style.lineHeight = "70px";
-
-    } else {
-
-      navHeader.style.boxShadow = "none";
-      navHeader.style.height = "90px";
-      navHeader.style.lineHeight = "90px";
-
-    }
-  }
-
-
-/* ----- TYPING EFFECT ----- */
- var typingEffect = new Typed(".typedText",{
-    strings : ["Developer","Coder","Tech Enthusiast"],
-    loop : true,
-    typeSpeed : 100, 
-    backSpeed : 80,
-    backDelay : 2000
- })
-
-
-/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
- const sr = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 2000,
-        reset: true     
- })
-
-/* -- HOME -- */
-sr.reveal('.featured-text-card',{})
-sr.reveal('.featured-name',{delay: 100})
-sr.reveal('.featured-text-info',{delay: 200})
-sr.reveal('.featured-text-btn',{delay: 200})
-sr.reveal('.social_icons',{delay: 200})
-sr.reveal('.featured-image',{delay: 300})
-
-
-/* -- PROJECT BOX -- */
-sr.reveal('.project-box',{interval: 200})
-
-/* -- HEADINGS -- */
-sr.reveal('.top-header',{})
-
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
-
-/* -- ABOUT INFO & CONTACT INFO -- */
-const srLeft = ScrollReveal({
-  origin: 'left',
-  distance: '80px',
-  duration: 2000,
-  reset: true
-})
-
-srLeft.reveal('.about-info',{delay: 100})
-srLeft.reveal('.contact-info',{delay: 100})
-
-/* -- ABOUT SKILLS & FORM BOX -- */
-const srRight = ScrollReveal({
-  origin: 'right',
-  distance: '80px',
-  duration: 2000,
-  reset: true
-})
-
-srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
-
-
-
-/* ----- CHANGE ACTIVE LINK ----- */
-
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive() {
-  const scrollY = window.scrollY;
+function scrollActive(){
+  const scrollY = window.pageYOffset
 
   sections.forEach(current =>{
-    const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 50,
+      const sectionHeight = current.offsetHeight
+      const sectionTop = current.offsetTop - 50;
       sectionId = current.getAttribute('id')
 
-    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
-
-        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
-
-    }  else {
-
-      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
-
-    }
+      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+      }else{
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+      }
   })
 }
-
 window.addEventListener('scroll', scrollActive)
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+function scrollHeader(){
+  const nav = document.getElementById('header')
+  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+  if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*==================== SHOW SCROLL TOP ====================*/ 
+function scrollTop(){
+  const scrollTop = document.getElementById('scroll-top');
+  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop)
+
+/*==================== DARK LIGHT THEME ====================*/ 
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+// If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.toggle(darkTheme)
+  themeButton.classList.toggle(iconTheme)
+  // We save the theme and the current icon that the user chose
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 2000,
+  reset: true
+});
+
+sr.reveal(`.home__data, .home__img,
+          .about__data, .about__img,
+          .services__content, .menu__content,
+          .app__data, .app__img,
+          .contact__data, .contact__button,
+          .footer__content`, {
+  interval: 200
+})
