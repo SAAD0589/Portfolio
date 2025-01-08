@@ -549,6 +549,7 @@ textarea{
 }
 
 .footer__social{
+  padding: 1%;
   font-size: 1.5rem;
   color: var(--title-color);
   margin-right: var(--mb-2);
@@ -800,4 +801,9 @@ textarea{
 	vertical-align: middle;
 	margin-left: 15px;
 }
-
+.footer__content{
+  text-align: center;
+}
+.icons_footer{
+  padding-top: 3%;
+}
